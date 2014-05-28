@@ -37,6 +37,7 @@ module RailsAdminSettings
               read_only true
               help false
             end
+            field :ns
             field :raw do
               partial "setting_value"
               visible do
