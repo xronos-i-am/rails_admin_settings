@@ -164,6 +164,8 @@ module RailsAdminSettings
       if is_file
         options[:raw] = ''
         file = options[:value]
+      elsif options[:kind] == 'boolean'
+        options[:raw] = options[:value] ? 'true' : 'false'
       else
         options[:raw] = options[:value]
       end
